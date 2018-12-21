@@ -28,9 +28,9 @@ export class CheeseList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    cheeses: state.cheeses,
+    cheeses: state.cheeseReducer.cheeses,
     state,
-    error: state.error
+    error: state.cheeseReducer.error
   }
 }
 
