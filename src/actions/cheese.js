@@ -28,6 +28,7 @@ export const fetchCheesesSuccess = (data) => {
 export const fetchCheeses = () => {
   return (dispatch) => {
     dispatch(fetchCheesesRequest());
+    console.log(`${API_BASE_URL}/cheeses`);
     fetch(`${API_BASE_URL}/cheeses`)
       .then(res => res.json())
       .then(cheeses => dispatch(fetchCheesesSuccess(cheeses.cheeses)))
